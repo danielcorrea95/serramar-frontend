@@ -16,7 +16,7 @@ import {
 } from './styles'
 import Image from 'next/image'
 
-import capaimage from '../../../assets/images/capa-copa-dos-campeoes.jpg'
+import capaimage from '../../../assets/images/capa-serramar.jpg'
 import imagedefault from '../../../assets/images/default.png'
 import { useEffect, useState } from 'react'
 import { api } from '@/lib/api'

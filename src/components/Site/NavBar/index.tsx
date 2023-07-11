@@ -7,7 +7,7 @@ import {
   NavbarLogo,
 } from './styles'
 
-import logoImage from '../../../../assets/images/LOGO COPA BRANCO.png'
+import logoImage from '../../../../assets/images/logo.png'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
