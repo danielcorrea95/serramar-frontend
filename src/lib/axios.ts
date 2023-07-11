@@ -12,7 +12,7 @@ export function getAPIClient(ctx?: any) {
   if (process.env.NODE_ENV === 'development') {
     baseURL = 'http://127.0.0.1:3333'
   } else {
-    baseURL = 'https://copas-rs-backend.herokuapp.com'
+    baseURL = 'https://serramar-5cbc91919a63.herokuapp.com'
   }
 
   const api = axios.create({
