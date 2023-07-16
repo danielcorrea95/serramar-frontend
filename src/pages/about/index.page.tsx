@@ -12,7 +12,9 @@ export default function About() {
         </p>
         <p>
           Para fazer o download do regulamento do campeonato,{' '}
-          <a href={regulamento}>clique aqui</a>
+          <a href={regulamento} download={regulamento}>
+            clique aqui
+          </a>
         </p>
       </Container>
     </Layout>
