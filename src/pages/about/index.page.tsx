@@ -1,8 +1,6 @@
 import Layout from '@/components/Site/Layout'
 import { Container } from './styles'
 
-import regulamento from '../../../assets/images/regulamento.pdf'
-
 export default function About() {
   return (
     <Layout>
@@ -10,12 +8,7 @@ export default function About() {
         <p className="ql-align-center">
           <strong>Regulamento SERRAMAR 2023</strong>
         </p>
-        <p>
-          Para fazer o download do regulamento do campeonato,{' '}
-          <a href={regulamento} download={regulamento}>
-            clique aqui
-          </a>
-        </p>
+        <p>Para fazer o download do regulamento do campeonato</p>
       </Container>
     </Layout>
   )
