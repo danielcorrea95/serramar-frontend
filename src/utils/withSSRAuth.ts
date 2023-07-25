@@ -23,6 +23,7 @@ export function withSSRAuth<P extends { [key: string]: any }>(
     const cookies = parseCookies(ctx)
     const token = cookies.accountTokenRS
 
+    console.log(token)
     if (!token) {
       return {
         redirect: {

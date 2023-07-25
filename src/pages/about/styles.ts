@@ -8,6 +8,17 @@ export const Container = styled('div', {
   margin: 'auto',
   justifyContent: 'space-between',
   gap: '$3',
+  marginBottom: '2rem',
+
+  a: {
+    textDecoration: 'none',
+    color: 'white',
+  },
+
+  'a:hover': {
+    cursor: 'pointer',
+    textDecoration: 'underline',
+  },
 
   '@media (max-width: 768px)': {
     padding: '$4',
