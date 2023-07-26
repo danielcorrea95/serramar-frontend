@@ -110,6 +110,8 @@ export function AuthProvider({ children }: AuxProps) {
         roles: response.data.user.roles,
       }
 
+      console.log(info)
+
       setCookie(undefined, 'accountTokenRS', response.data.token, {
         maxAge: 60 * 60 * 24 * 30, // 30 days
         path: '/',
