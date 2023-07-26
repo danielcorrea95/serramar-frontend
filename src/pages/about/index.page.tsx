@@ -3,7 +3,6 @@ import { Container } from './styles'
 
 export default function About() {
   const pdfUrl = 'https://rs-esportes-copas.s3.amazonaws.com/regulamento.pdf' // Substitua pelo caminho correto do arquivo PDF
-
   return (
     <Layout>
       <Container>
