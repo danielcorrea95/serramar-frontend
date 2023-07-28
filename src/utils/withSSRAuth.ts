@@ -21,7 +21,7 @@ export function withSSRAuth<P extends { [key: string]: any }>(
     ctx: GetServerSidePropsContext,
   ): Promise<GetServerSidePropsResult<P> | undefined> => {
     const cookies = parseCookies(ctx)
-    const token = cookies.accountTokenRS
+    const token = cookies.accountTokenSerramar
 
     console.log(token)
     if (!token) {
@@ -59,8 +59,8 @@ export function withSSRAuth<P extends { [key: string]: any }>(
       return returnData
     } catch (err) {
       if (err instanceof AuthTokenError) {
-        destroyCookie(ctx, 'accountTokenRS')
-        destroyCookie(ctx, 'refreshTokenRS')
+        destroyCookie(ctx, 'accountTokenSerramar')
+        destroyCookie(ctx, 'refreshTokenSerramar')
 
         return {
           redirect: {

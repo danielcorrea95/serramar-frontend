@@ -7,7 +7,7 @@ let isRefreshing = false
 let failedRequestsQueue: any = []
 
 export function getAPIClient(ctx?: any) {
-  const { accountTokenRS: token } = parseCookies(ctx)
+  const { accountTokenSerramar: token } = parseCookies(ctx)
   let baseURL = ''
   if (process.env.NODE_ENV === 'development') {
     baseURL = 'http://127.0.0.1:3333'
@@ -30,7 +30,7 @@ export function getAPIClient(ctx?: any) {
       console.log(error)
       if (error.response.status === 401) {
         if (error.response.data?.message === 'Unauthorized') {
-          const { refreshTokenRS } = parseCookies(ctx)
+          const { refreshTokenSerramar } = parseCookies(ctx)
           const originalConfig = error.config
 
           if (!isRefreshing) {
@@ -38,16 +38,16 @@ export function getAPIClient(ctx?: any) {
 
             api
               .post('/token/refresh', {
-                token: refreshTokenRS,
+                token: refreshTokenSerramar,
               })
               .then((response) => {
                 const { token } = response.data
-                setCookie(ctx, 'accountTokenRS', token, {
+                setCookie(ctx, 'accountTokenSerramar', token, {
                   maxAge: 60 * 60 * 24 * 30, // 30 days
                   path: '/',
                 })
 
-                setCookie(ctx, 'refreshTokenRS', response.data.refresh_token, {
+                setCookie(ctx, 'refreshTokenSerramar', response.data.refresh_token, {
                   maxAge: 60 * 60 * 24 * 30, // 30 days
                   path: '/',
                 })
