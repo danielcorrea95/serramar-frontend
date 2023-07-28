@@ -37,8 +37,8 @@ export const AuthContext = createContext({} as AuthContextType)
 let authChannel: BroadcastChannel
 
 export function signOut() {
-  destroyCookie(undefined, 'accountTokenSerramar')
-  destroyCookie(undefined, 'refreshTokenSerramar')
+  destroyCookie(undefined, 'accountTokenRS')
+  destroyCookie(undefined, 'refreshTokenRS')
 
   authChannel.postMessage('signOut')
 
@@ -65,7 +65,7 @@ export function AuthProvider({ children }: AuxProps) {
   }, [])
 
   useEffect(() => {
-    const { accountTokenSerramar: token } = parseCookies()
+    const { accountTokenRS: token } = parseCookies()
 
     if (token) {
       api
@@ -110,20 +110,15 @@ export function AuthProvider({ children }: AuxProps) {
         roles: response.data.user.roles,
       }
 
-      setCookie(undefined, 'accountTokenSerramar', response.data.token, {
+      setCookie(undefined, 'accountTokenRS', response.data.token, {
         maxAge: 60 * 60 * 24 * 30, // 30 days
         path: '/',
       })
 
-      setCookie(
-        undefined,
-        'refreshTokenSerramar',
-        response.data.refresh_token,
-        {
-          maxAge: 60 * 60 * 24 * 30, // 30 days
-          path: '/',
-        },
-      )
+      setCookie(undefined, 'refreshTokenRS', response.data.refresh_token, {
+        maxAge: 60 * 60 * 24 * 30, // 30 days
+        path: '/',
+      })
 
       api.defaults.headers.Authorization = `Bearer ${response.data.token}`
 

@@ -12,7 +12,7 @@ export function withSSRGuest<P extends { [key: string]: any }>(
   ): Promise<GetServerSidePropsResult<P>> => {
     const cookies = parseCookies(ctx)
 
-    if (cookies.accountTokenSerramar) {
+    if (cookies.accountTokenRS) {
       return {
         redirect: {
           destination: '/admin',
