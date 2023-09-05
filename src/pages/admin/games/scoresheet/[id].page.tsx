@@ -397,12 +397,12 @@ export const getServerSideProps = withSSRAuth(
     const returnGameDetails: UpdateGameDetailFormSchema = {
       id: data.id,
       gameId: data.game_id,
-      firstPeriodStart: data.first_period_start,
-      firstPeriodEnd: data.first_period_end,
-      secondPeriodStart: data.second_period_start,
-      secondPeriodEnd: data.second_period_end,
-      extraPeriodStart: data.extra_period_start,
-      extraPeriodEnd: data.extra_period_end,
+      firstPeriodStart: data.first_period_start || null,
+      firstPeriodEnd: data.first_period_end || null,
+      secondPeriodStart: data.second_period_start || null,
+      secondPeriodEnd: data.second_period_end || null,
+      extraPeriodStart: data.extra_period_start || null,
+      extraPeriodEnd: data.extra_period_end || null,
       observation: data.obs,
       userId: user.data.user.id,
     }
