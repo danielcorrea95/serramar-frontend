@@ -16,7 +16,7 @@ import { AuthContext } from '@/contexts/AuthContext'
 export default function RegisterGame() {
   const { accountUser } = useContext(AuthContext)
   const [categories, setCategories] = useState([])
-  const [groups, setGroups] = useState([])
+  // const [groups, setGroups] = useState([])
   const router = useRouter()
 
   useEffect(() => {
@@ -37,8 +37,8 @@ export default function RegisterGame() {
         `/groups/536d5349-d1f1-43aa-8ffc-8abb527324f6`,
       )
       const data = groups.data
-
-      setGroups(data)
+      console.log(data)
+      // setGroups(data)
     }
 
     getGroups()
@@ -58,26 +58,12 @@ export default function RegisterGame() {
               <Text>Categoria</Text>
               <SelectInput>
                 <Option>Selecionar categoria</Option>
-                {/* {categories.map((item) => {
-                  return (
-                    <Option key={item.id} value={item.id}>
-                      {item.name}
-                    </Option>
-                  )
-                })} */}
               </SelectInput>
             </label>
             <label>
               <Text>Grupo</Text>
               <SelectInput>
                 <option>Selecione o grupo</option>
-                {/* {groups.map((item) => {
-                  return (
-                    <Option key={item.id} value={item.id}>
-                      {item.name}
-                    </Option>
-                  )
-                })} */}
               </SelectInput>
             </label>
             <label>
