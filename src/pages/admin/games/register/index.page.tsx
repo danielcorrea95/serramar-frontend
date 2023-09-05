@@ -58,26 +58,26 @@ export default function RegisterGame() {
               <Text>Categoria</Text>
               <SelectInput>
                 <Option>Selecionar categoria</Option>
-                {categories.map((item) => {
+                {/* {categories.map((item) => {
                   return (
                     <Option key={item.id} value={item.id}>
                       {item.name}
                     </Option>
                   )
-                })}
+                })} */}
               </SelectInput>
             </label>
             <label>
               <Text>Grupo</Text>
               <SelectInput>
                 <option>Selecione o grupo</option>
-                {groups.map((item) => {
+                {/* {groups.map((item) => {
                   return (
                     <Option key={item.id} value={item.id}>
                       {item.name}
                     </Option>
                   )
-                })}
+                })} */}
               </SelectInput>
             </label>
             <label>
