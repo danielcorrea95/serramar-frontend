@@ -34,6 +34,7 @@ export default function Classification() {
                   </tr>
                 </thead>
                 <tbody>
+                  {/* 2 games */}
                   <tr>
                     <td>1º</td> {/* POSICAO  */}
                     <td>Xangri-lá</td> {/* EQUIPE  */}
