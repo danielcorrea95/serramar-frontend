@@ -159,7 +159,7 @@ export default function Classification() {
                     <td>4</td> {/* GOLS PRO  */}
                     <td>6</td> {/* GOLS CONTRA  */}
                     <td>14</td> {/* CARTAO AMARELO  */}
-                    <td>0</td> {/* CARTAO VERMELHO  */}
+                    <td>2</td> {/* CARTAO VERMELHO  */}
                   </tr>
                   <tr>
                     <td>10º</td> {/* POSICAO  */}
